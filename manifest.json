@@ -1,0 +1,26 @@
+{
+    "manifest_version" : 2,
+    "name" : "Improved KA Editor",
+    "version" : "0.2.0",
+    "description" : "KA editor upgrade",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "declarativeContent",
+        "https://www.khanacademy.org/computer-programming/*",
+        "storage"
+    ],
+    "icons": {
+        "128": "icons/128.png",
+        "48": "icons/48.png",
+        "32": "icons/32.png",
+        "16": "icons/16.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.khanacademy.org/computer-programming/*"],
+            "js": ["content.js"],
+            "css" : ["content.css"]
+        }
+    ]
+}
